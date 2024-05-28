@@ -16,7 +16,7 @@ const ProductDetail = () => {
       <div className='flex justify-between items-center p-6'>
         <h2 className='font-medium text-xl'>Detail</h2>
         <div 
-          className='product-close-detail cursor-pointer'
+          className='product-close-detail'
           onClick={() => context.toogleProductDetail(true)}
         >
           <XMarkIcon className='size-6' />
