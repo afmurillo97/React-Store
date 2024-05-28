@@ -1,0 +1,16 @@
+.product-detail {
+    width: 360px;
+    height: calc(100vh - 68px);
+    top: 68px;
+}
+
+.product-close-detail :hover{
+    background-color: rgba(255, 0, 0, 0.4); 
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.product-close-detail:hover svg {
+    color: white;
+}
+
