@@ -4,6 +4,10 @@
     top: 68px;
 }
 
+.product-close-detail {
+    cursor: pointer;
+}
+
 .product-close-detail :hover{
     background-color: rgba(255, 0, 0, 0.4); 
     border-radius: 50%;
