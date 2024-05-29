@@ -1,0 +1,87 @@
+.checkout-side-menu {
+    width: 360px;
+    height: calc(100vh - 68px);
+}
+
+.checkout-side-menu-close {
+    cursor: pointer;
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out, padding 300ms ease-in-out;
+}
+
+.checkout-side-menu-close :hover{
+    background-color: #f87171; 
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.checkout-side-menu-close:hover svg {
+    color: white;
+    transition: color 300ms ease-in-out;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutLeft {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}
+
