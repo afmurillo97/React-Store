@@ -1,20 +1,90 @@
 .product-detail {
     width: 360px;
     height: calc(100vh - 68px);
-    top: 68px;
 }
 
-.product-close-detail {
+.product-detail-close {
     cursor: pointer;
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out, padding 300ms ease-in-out;
 }
 
-.product-close-detail :hover{
-    background-color: rgba(255, 0, 0, 0.4); 
+.product-detail-close :hover{
+    background-color: #f87171; 
     border-radius: 50%;
     padding: 2px;
 }
 
-.product-close-detail:hover svg {
+.product-detail-close:hover svg {
     color: white;
+    transition: color 300ms ease-in-out;
 }
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutLeft {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleOut {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}
+
+
+
 
