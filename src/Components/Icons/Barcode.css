@@ -1,0 +1,22 @@
+/* icon.css */
+.st0, .st1, .st2, .st3 {
+  fill: none;
+  stroke: #000;
+  stroke-miterlimit: 10;
+}
+
+.st1 {
+  stroke-width: 1.7px;
+}
+
+.st2 {
+  stroke-width: 3.7px;
+}
+
+.st3 {
+  stroke-width: 7.7px;
+}
+
+.st4 {
+  stroke-width: 5.7px;
+}
