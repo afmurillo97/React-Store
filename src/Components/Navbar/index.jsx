@@ -126,7 +126,7 @@ const Navbar = () => {
         </li>
         <li className='relative cursor-pointer'>
           <span className='absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-yellow-400 rounded-full w-5 h-5 flex items-center justify-center text-xs'>
-            {context.count}
+            {context.cartProducts.length}
           </span>
           <ShoppingBagIcon className='size-7'/>
         </li>
