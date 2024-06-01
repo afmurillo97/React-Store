@@ -49,6 +49,9 @@ export const ShoppingCartProvider = ({ children }) => {
   // Product Detail: Add products to cart
   const [cartProducts, setCartProducts] = useState([]);
 
+  //Shopping Cart: Order
+  const [orders, setOrders] = useState([]);
+
   return (
     <ShoppingCartContext.Provider value={{
       getFirstThreeWords,
@@ -66,6 +69,8 @@ export const ShoppingCartProvider = ({ children }) => {
       closeProductDetail,
       openCheckoutSideMenu,
       closeCheckoutSideMenu,
+      orders,
+      setOrders
     }}>
       { children }
     </ShoppingCartContext.Provider>
