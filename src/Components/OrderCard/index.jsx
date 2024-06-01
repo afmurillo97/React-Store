@@ -2,7 +2,7 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 import PropTypes from 'prop-types';
 
 const OrderCard = props => {
-  const { title, imageUrl, price } = props;
+  const { id, title, imageUrl, price, handleDelete } = props;
 
   return (
     <div className='flex justify-between items-center py-4'>
@@ -15,16 +15,23 @@ const OrderCard = props => {
 
       <div className='flex items-center gap-2'>
         <p className='text-lg font-medium'>{ price }</p>
-        <XMarkIcon className="size-6 cursor-pointer rounded-full hover:bg-red-400 hover:text-white hover:p-1 transition duration-300 ease-in-out" />
+        {handleDelete && (
+          <XMarkIcon 
+            onClick={() => handleDelete(id)} 
+            className="size-6 cursor-pointer rounded-full hover:bg-red-400 hover:text-white hover:p-1 transition duration-300 ease-in-out" 
+          />
+        )}
       </div>
     </div>
   );
 };
 
 OrderCard.propTypes = {
-  imageUrl: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
+  imageUrl: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
+  handleDelete: PropTypes.func,
 };
 
 export default OrderCard;
