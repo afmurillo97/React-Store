@@ -1,0 +1,183 @@
+/* General order styles */
+.order {
+    width: 400px;
+    max-width: 100%;
+    position: relative;
+    background: #f7fafc; /* Light gray background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transition: all 0.5s ease-in-out; /* Smooth transition for changes */
+    z-index: 1; /* Default z-index */
+    display: flex;
+    flex-direction: column; /* Cambiar dirección a columna */
+    align-items: center; /* Centrar elementos horizontalmente */
+}
+
+.order.active {
+    z-index: 10; /* Higher z-index for the active order */
+    background: #f7fafc; /* Ensure no transparency */
+}
+
+/* Shared order half styles */
+.order__half{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    perspective: 1000px;
+}
+
+.links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    perspective: 1000px;
+}
+
+.order__half::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    backface-visibility: hidden;
+    transition: all 0.8s ease 0.35s;
+}
+
+.order.active .order__half::after {
+    transition-delay: 0s;
+}
+
+/* Upper half */
+.upper {
+    padding: 20px;
+}
+
+.upper::after {
+    top: 100%;
+    background: #e2e8f0; /* Slightly darker gray */
+    border-top: 2px dashed #dedede;
+    transform: rotate3d(1, 0, 0, -90deg);
+    transform-origin: top center;
+}
+
+.order.active .upper::after {
+    background: #f7fafc;
+    transform: rotate3d(1, 0, 0, 0deg);
+}
+
+/* Lower half */
+.lower {
+    transition: transform 0.8s ease 0.35s;
+    z-index: 10;
+}
+
+.lower::after {
+    bottom: 100%;
+    background: #cbd5e0; /* Darker gray for lower part */
+    transform: rotate3d(1, 0, 0, 90deg);
+    transform-origin: bottom center;
+}
+
+.order.active .lower {
+    border-top: none;
+    transform: translateY(200px);
+    transition-delay: 0s;
+    z-index: 10; /* Higher z-index for the active order */
+    background: #f7fafc; /* Ensure no transparency */
+}
+
+.order.active .lower::after {
+    background: #f7fafc;
+    transition: background 0.5s ease, transform 0.5s ease;
+    transition-delay: 0s, 0.5s;
+    transform: rotate3d(1, 0, 0, 0deg);
+}
+
+.order.active .lower::after {
+    background: transparent;
+    transition-delay: 0.5s;
+}
+
+/* Text styles */
+.order_title {
+    margin: 10px 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.order_title.page-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.order_paragraph {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.order_paragraph.sm {
+    font-size: 80%;
+}
+
+/* Button */
+.order_button, .order_link {
+    width: 100%;
+    padding: 15px 20px;
+    background: none;
+    outline: none;
+    border: none;
+    border-top: 2px dashed #dedede;
+    color: #888;
+    font-size: 90%;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.35s ease;
+}
+
+.order_button:hover {
+    color: #555; /* Darker text on hover */
+}
+
+/* Receipt content */
+.order__content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+    position: absolute;
+    top: 150px;
+    left: 0;
+    z-index: 20; /* Ensure the content is above other elements */
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    background-color: #f7fafc;
+}
+
+.order.active .order__content {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.8s;
+    z-index: 20; /* Ensure the content is above other elements */
+}
+
+.order_table {
+    width: 100%;
+}
+
+.order_tr {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
