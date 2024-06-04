@@ -29,7 +29,6 @@ const IconPlus = props => {
 
 IconPlus.propTypes = {
   title: PropTypes.string.isRequired
-
 };
 
 export default IconPlus;
