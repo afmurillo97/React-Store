@@ -7,7 +7,9 @@ import {
 } from '@heroicons/react/24/outline';
 import { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
+import IconSearchBar from '../Icons/IconSearchBar';
 import { ShoppingCartContext } from '../../Context';
+
 
 
 const Navbar = () => {
@@ -35,7 +37,7 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink 
-            to = '/Clothes'
+            to = '/clothes'
             className = {( {isActive} ) => 
               isActive ? activeStyle : undefined
             }
@@ -45,7 +47,7 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink 
-            to = '/Electronics'
+            to = '/electronics'
             className = {( {isActive} ) => 
               isActive ? activeStyle : undefined
             }
@@ -55,27 +57,17 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink 
-            to = '/Furnitures'
+            to = '/jewerly'
             className = {( {isActive} ) => 
               isActive ? activeStyle : undefined
             }
           >
-            Furnitures
+            Jewerly
           </NavLink>
         </li>
         <li>
           <NavLink 
-            to = '/Toys'
-            className = {( {isActive} ) => 
-              isActive ? activeStyle : undefined
-            }
-          >
-            Toys
-          </NavLink>
-        </li>
-        <li>
-          <NavLink 
-            to = '/Others'
+            to = '/others'
             className = {( {isActive} ) => 
               isActive ? activeStyle : undefined
             }
@@ -83,6 +75,13 @@ const Navbar = () => {
             Others
           </NavLink>
         </li>
+      </ul>
+        
+      <ul>
+        <IconSearchBar 
+          title='Search product'
+          onSearch={searchValue => context.setSearchByTitle(searchValue)}
+        />
       </ul>
 
       <ul className='flex items-center gap-3'>
@@ -124,7 +123,10 @@ const Navbar = () => {
             <span>Sign In</span>
           </NavLink>
         </li>
-        <li className='relative cursor-pointer'>
+        <li 
+          className='relative cursor-pointer'
+          onClick={() => context.openCheckoutSideMenu()}
+        >
           <span className='absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-yellow-400 rounded-full w-5 h-5 flex items-center justify-center text-xs'>
             {context.cartProducts.length}
           </span>
