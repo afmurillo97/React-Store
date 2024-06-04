@@ -1,22 +1,22 @@
 .checkout-side-menu {
-    width: 360px;
-    height: calc(100vh - 68px);
+  width: 360px;
+  height: calc(100vh - 75px);
 }
 
 .checkout-side-menu-close {
-    cursor: pointer;
-    transition: background-color 300ms ease-in-out, color 300ms ease-in-out, padding 300ms ease-in-out;
+  cursor: pointer;
+  transition: background-color 300ms ease-in-out, color 300ms ease-in-out, padding 300ms ease-in-out;
 }
 
 .checkout-side-menu-close :hover{
-    background-color: #f87171; 
-    border-radius: 50%;
-    padding: 2px;
+  background-color: #f87171; 
+  border-radius: 50%;
+  padding: 2px;
 }
 
 .checkout-side-menu-close:hover svg {
-    color: white;
-    transition: color 300ms ease-in-out;
+  color: white;
+  transition: color 300ms ease-in-out;
 }
 
 @keyframes slideInRight {
