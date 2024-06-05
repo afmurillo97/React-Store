@@ -15,6 +15,8 @@ function MyOrder() {
   
   const index = requestPath === 'last' ? context.orders?.length - 1 : parseInt(requestPath, 10);
 
+  console.log(requestPath);
+
   const order = context.orders?.[index];
   const products = order?.products || [];
 
@@ -25,7 +27,7 @@ function MyOrder() {
           <header className='mb-4'>
             <div className='flex items-center justify-between'>
               <div className='w-1/4'>
-                <Link to='/my-orders' title='Back to my orders'>
+                <Link to='/react-store/my-orders' title='Back to my orders'>
                   <ChevronLeftIcon className='size-10 rounded-full hover:bg-red-400 hover:text-white hover:transition-colors hover:duration-500 ease-in-out' />
                 </Link>
               </div>
