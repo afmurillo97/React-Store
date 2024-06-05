@@ -18,7 +18,7 @@ const CheckoutSideMenu = () => {
 
   const handleCheckout = () => {
     const orderToAdd = {
-      date: '01.02.2024',
+      date: new Date().toLocaleDateString('en-us', { weekday:"long", year:"numeric", month:"short", day:"numeric"}),
       products: context.cartProducts,
       totalProducts: context.cartProducts.length,
       totalPrice: totalPrice(context.cartProducts)
@@ -51,7 +51,7 @@ const CheckoutSideMenu = () => {
             <span className='font-medium text-2xl'>${totalPrice(context.cartProducts)}</span>
           </p>
           {(context.cartProducts.length > 0) && (
-            <Link to='/react-store/my-orders/last'>
+            <Link to='/my-orders/last'>
               <button
                 className='group flex items-center justify-center w-11 h-11 bg-black rounded-full cursor-pointer relative overflow-hidden transition-all duration-200 shadow-lg hover:w-full hover:rounded-lg active:translate-x-1 active:translate-y-1'
                 onClick={() => handleCheckout()}

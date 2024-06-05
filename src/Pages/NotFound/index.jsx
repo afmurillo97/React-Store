@@ -59,11 +59,6 @@ function NotFound() {
               </div>
             </div>
           </div>
-          <div className="bottom">
-            <div className="base1"></div>
-            <div className="base2"></div>
-            <div className="base3"></div>
-          </div>
         </div>
         <div className="text_404">
           <div className="text_4041">4</div>

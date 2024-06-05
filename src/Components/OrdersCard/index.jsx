@@ -33,7 +33,7 @@ const OrdersCard = props => {
       <section className='order__half upper'>
         <p className='order_paragraph'>Order ID: <strong>XZ8W4N2Q</strong></p>
         <h1 className='order_title'><CurrencyDollarIcon className='size-5'/>{totalPrice}</h1>
-        <p className='order_paragraph sm'><CalendarDaysIcon className='size-5'/>{`${date} - 09:47`}</p>
+        <p className='order_paragraph sm'><CalendarDaysIcon className='size-5'/>{date}</p>
 
         <div className='order__content'>
           <table className='order_table'>

@@ -16,19 +16,18 @@ const Navbar = () => {
 
   const context = useContext(ShoppingCartContext);
   const activeStyle = 'underline underline-offset-4 text-white';
-  const base = '/react-store/';
 
   return (
     <nav className='flex justify-between items-center fixed z-10 top-0 w-full py-5 px-8 text-sm font-light bg-red-400 shadow-md'>
       <ul className='flex items-center gap-3'>
         <li className='font-semibold text-lg'>
-          <NavLink to = {base}>
+          <NavLink to = '/'>
             Shopi
           </NavLink>
         </li>
         <li>
           <NavLink 
-            to = {base}
+            to = '/'
             className = {( {isActive} ) => 
               isActive ? activeStyle : undefined
             }
@@ -38,7 +37,7 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink 
-            to = { base + 'clothes' }
+            to = 'clothes'
             className = {( {isActive} ) => 
               isActive ? activeStyle : undefined
             }
@@ -48,7 +47,7 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink 
-            to = { base + 'electronics' }
+            to = 'electronics'
             className = {( {isActive} ) => 
               isActive ? activeStyle : undefined
             }
@@ -58,7 +57,7 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink 
-            to = { base + 'jewerly'}
+            to = 'jewerly'
             className = {( {isActive} ) => 
               isActive ? activeStyle : undefined
             }
@@ -68,7 +67,7 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink 
-            to = { base + 'others'}
+            to = 'others'
             className = {( {isActive} ) => 
               isActive ? activeStyle : undefined
             }
@@ -93,7 +92,7 @@ const Navbar = () => {
         </li>
         <li className='flex items-center'>
           <NavLink 
-            to={ base + 'my-orders' }
+            to = 'my-orders'
             className={( {isActive} ) => 
               isActive ? activeStyle : undefined
             }
@@ -104,7 +103,7 @@ const Navbar = () => {
         </li>
         <li className='flex flex-col items-center'>
           <NavLink 
-            to={ base + 'my-account' }
+            to = 'my-account'
             className = {( {isActive} ) => 
               isActive ? activeStyle : undefined
             }
@@ -115,7 +114,7 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink 
-            to={ base + 'sign-in' }
+            to = 'sign-in'
             className = {( {isActive} ) => 
               isActive ? activeStyle : undefined
             }
