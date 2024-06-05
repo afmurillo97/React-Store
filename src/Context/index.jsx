@@ -35,7 +35,7 @@ export const ShoppingCartProvider = ({ children }) => {
 
   const fetchItemsByCategory = async (category) => {
     const categoryUrl = (category.length) ? 'category/' + category : '';
-    const response = await fetch(`https://fakest111oreapi.com/products/${categoryUrl}`);
+    const response = await fetch(`https://fakestoreapi.com/products/${categoryUrl}`);
     return response.json();
   };
 
@@ -49,7 +49,7 @@ export const ShoppingCartProvider = ({ children }) => {
   //API proyect: Get all Items
   useEffect(() => {
     setIsLoading(true);
-    fetch('https://fakest111oreapi.com/products')
+    fetch('https://fakestoreapi.com/products')
       .then(response => response.json())
       .then(data => {
         setItems(data);
