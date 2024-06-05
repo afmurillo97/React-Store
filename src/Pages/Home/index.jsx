@@ -19,12 +19,13 @@ function Home() {
     { name: 'electronics', value: ['electronics'] },
     { name: 'jewerly', value: ['jewelery'] },
     { name: 'others', value: [''] },
+    { name: 'react-store', value: [''] },
     { name: '', value: [''] },
   ], []);
     
   useEffect(() => {
     const categoryObject = categories.find(category => category.name === requestPath);
-    const categoriesSelected = categoryObject ? categoryObject.value : [];
+    const categoriesSelected = categoryObject ? categoryObject.value : [''];
     setCategoryRequested(prev => {
       // Only update if the selected categories are different
       if (prev.join(',') !== categoriesSelected.join(',')) {
@@ -43,6 +44,8 @@ function Home() {
       ? itemsToRender.map((item, i) => <Card key={i} data={item} />)
       : <h1 className='font-bold text-3xl'>We Don&apos;t have Anything...</h1>
   }
+
+  console.log(requestPath);
   
   return (
     <Layout>

@@ -92,7 +92,7 @@ export const ShoppingCartProvider = ({ children }) => {
         });
     }
   }, [categoryRequested]);
-
+  
   return (
     <ShoppingCartContext.Provider value={{
       count,
